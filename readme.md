@@ -1,14 +1,11 @@
-# Oracle compute instance creation script
+# Crear instancias de Oracle a través de Javascript utilizando la consola de desarrollador de Google Chrome
 
-A JS script that continuously attempts to create an Oracle free tier compute instance.
+Adaptación al español de las instrucciones realizadas por gardinbe, para simplificar el proceso en caso de no controlar el idioma (https://github.com/gardinbe/oracle-compute-instance-creation-script)
 
-## How to use
+## Requisitos previos
 
-1. Follow the steps at https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud
-2. Ensure all fields are entered correctly as per the blog post above at https://cloud.oracle.com/compute/instances/create
-3. Open dev tools (press F12), and select the 'console' tab
-4. Paste in the contents of [script.js](/script.js) into the console and press enter
-5. Close dev tools, make sure your computer doesn't go to sleep, and pray for the next few hours
+1. Haberse dado de alta en Oracle con una cuenta (gratuita, trial, Pay As You Go) -- Tutorial -> https://XXXXX
+
 
 ## Notes
 **DO NOT CLOSE THE POPUP WINDOW!**
