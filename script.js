@@ -6,19 +6,19 @@ const computeWindow = document.querySelector("#compute-wrapper")
 	? window
 	: document.querySelector("#sandbox-compute-container")?.contentWindow;
 if (!computeWindow)
-	throw new Error("Failed to find iframe window");
+	throw new Error("Error al cargar la ventana iframe");
 
 const createBtn = computeWindow.document.querySelector(".oui-savant__Panel--Footer .oui-button.oui-button-primary");
 if (!createBtn || createBtn.textContent !== "Create")
-	throw new Error("Failed to find 'Create' button");
+	throw new Error("Error al encontrar el botón de 'Create'");
 
 const contentsElmt = computeWindow.document.querySelector(".oui-savant__Panel--Contents");
 if (!contentsElmt)
-	throw new Error("Failed to find contents element");
+	throw new Error("Error al encontrar los contenidos del elemento");
 
 const headerElmt = computeWindow.document.querySelector(".oui-savant__Panel--Header");
 if (!headerElmt)
-	throw new Error("Failed to find header element");
+	throw new Error("Error al encontrar la cabecera del elemento");
 
 /**
  * Create a new window to cloud.oracle.com, and then periodically
@@ -68,23 +68,23 @@ const logStyle = color => `background-color: #222; color: ${color}`;
 console.clear();
 
 console.info(
-	"%c *** Started Oracle compute instance creation script *** ",
+	"%c *** Arranca el script para la creación de la instancia en la nube de Oracle *** ",
 	logStyle("#e0b414")
 );
 console.info(
-	"%c *** DO NOT CLOSE THE POPUP WINDOW! *** ",
+	"%c *** NO CIERRES LA VENTANA EMERGENTE! *** ",
 	logStyle("#ff4d4d")
 );
 console.info(
-	"%c *** Filter logs with '***' to only show outputs from this script. *** ",
+	"%c *** Filtra los logs que empiecen por '***' para mostrar la salida de este script *** ",
 	logStyle("#f0dd99")
 );
 console.info(
-	"%c *** It's advised to close dev tools while the script is running, as over long periods of time it may crash (Oracle's fault). *** ",
+	"%c *** Es idóneo cerrar las herramientas de desarrollador pasado un tiempo para evitar posibles chrasheos (fallo en el lado de Oracle) *** ",
 	logStyle("#f0dd99")
 );
 console.info(
-	"%c *** You can change the interval duration between clicks on the fly by changing the value of the variable `INTERVAL_DURATION` - default is 30 (seconds). *** ",
+	"%c *** Puedes cambiar el intervalo con el que se lanza el botón cambiando la variable `INTERVAL_DURATION` (no recomendado) - el valor predeterminado es 30 (segundos) *** ",
 	logStyle("#f0dd99")
 );
 
@@ -110,7 +110,7 @@ let countdown = countdownDuration();
 void setInterval(() => {
 	if (countdown > 0) {
 		statusElmt.style.backgroundColor = "#00688c";
-		statusElmt.innerHTML = `Clicking in <b>${countdown} seconds</b>`;
+		statusElmt.innerHTML = `Dándole al botón en <b>${countdown} segundos</b>`;
 		countdown--;
 		return;
 	}
@@ -118,9 +118,9 @@ void setInterval(() => {
 	sessionWindow.location.reload();
 	createBtn.click();
 	statusElmt.style.backgroundColor = "#44bd50";
-	statusElmt.innerHTML = `Create clicked!`;
+	statusElmt.innerHTML = `Click realizado!`;
 	console.log(
-		`%c *** Clicked 'Create' at ${currentTime()} *** `,
+		`%c *** Click 'creado' en ${currentTime()} *** `,
 		logStyle("#7cde6f")
 	);
 	countdown = countdownDuration();
