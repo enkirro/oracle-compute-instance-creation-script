@@ -4,11 +4,16 @@ Adaptación al español de las instrucciones realizadas por gardinbe, para simpl
 
 ## Requisitos previos
 
-1. Haberse dado de alta en Oracle con una cuenta (gratuita, trial, Pay As You Go) -- Tutorial -> https://XXXXX
+- Haberse dado de alta en Oracle con una cuenta (gratuita, trial, Pay As You Go) -- Tutorial -> https://XXXXX
 
 ## Pasos a realizar
 
+**Importante, a la hora de crear nuestra instancia será necesario desmarcar la opción de "Redwood Preview" ya que este script está adaptador a la interfaz antigua/clásica**
+
+![alt text](src/img/desactivar_redwood.png)
+
 1. Crearemos nuestra instancia en https://cloud.oracle.com/compute/instances/create según la configuración y capacidad que queramos tener en nuestra instancia
+
 
 2. Cuando estén rellenados todos los pasos y únicamente quede darle al botón de "Create" o "Crear", abriremos la consola de desarrollador del navegador (pulsando F12 o navegando desde las opciones del navegador
 
