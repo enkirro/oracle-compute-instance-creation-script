@@ -42,7 +42,7 @@ Según el navegador que utilicemos, esta consola se abrirá en el lateral de la 
 
 # Notas
 
-- Este método **no es el más recomendable**, pero es el más sencillo en caso de no tener nociones informáticas.
+- Este método **no es el más recomendable**, pero es el más sencillo en caso de no tener nociones informáticas; en caso de querer realizar esto por API, se puede seguir la info del otro [repositorio](https://github.com/enkirro/oracle-creacion-instancias-api)
 <p>
 
 - Es **muy recomendable** tener la cuenta en Pay As you Go, sino el fallo por capacidad en una cuenta "gratuita" es algo muy típico.
